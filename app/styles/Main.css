@@ -1,0 +1,40 @@
+body {
+  margin: 8px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+}
+
+.navbar-container {
+  background-color: rgb(255, 102, 0);
+  height: 23px;
+  width: 100%;
+  font-size: 10pt;
+  color: #828282;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.nav-main{
+  width: 85%;
+  background-color: rgb(246, 246, 239);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.subtext-container {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 7pt;
+  color: #828282;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+li {
+  margin: 5px;
+}
