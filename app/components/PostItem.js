@@ -1,9 +1,11 @@
-var React = require('react');
-var Firebase = require('firebase');
-var ReactFireMixin = require('reactfire');
-var moment = require('moment');
+'use strict';
 
-var PostItem = React.createClass({
+import React from 'react';
+import Firebase from 'firebase';
+import ReactFireMixin from 'reactfire';
+import moment from 'moment';
+
+export default React.createClass({
   mixins: [ReactFireMixin],
   getInitialState: function() {
     return {
@@ -22,12 +24,12 @@ var PostItem = React.createClass({
   renderSubText: function() {
     var commentTime = moment(this.state.postItem.time * 1000).fromNow();
     var score = this.state.postItem.score;
-    var poster = this.state.postItem.by
+    var author = this.state.postItem.by
     return (
       <div className="subtext-container">
-        <span>{score} points by {poster} </span>
+        <span>{score} points by {author}</span>
         <span> {commentTime}</span>
-        <span> | comments </span>
+        <span> | comments</span>
       </div>
     )
   },
@@ -40,5 +42,3 @@ var PostItem = React.createClass({
     )
   }
 });
-
-module.exports = PostItem;

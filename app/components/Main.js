@@ -1,8 +1,10 @@
-var React = require('react');
-var RouteHandler = require('react-router').RouteHandler;
-require('../styles/Main.css')
+'use strict';
 
-var Main = React.createClass({
+import React from 'react';
+import { RouteHandler } from 'react-router';
+import '../styles/Main.css'
+
+export default React.createClass({
   render: function() {
     return (
       <div className="nav-main">
@@ -16,5 +18,3 @@ var Main = React.createClass({
     )
   }
 });
-
-module.exports = Main;

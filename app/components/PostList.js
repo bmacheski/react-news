@@ -1,9 +1,11 @@
-var React = require('react');
-var PostItem = require('./PostItem');
-var Firebase = require('firebase');
-var ReactFireMixin = require('reactfire');
+'use strict';
 
-var PostList = React.createClass({
+import React from 'react';
+import PostItem from './PostItem';
+import Firebase from 'firebase';
+import ReactFireMixin from 'reactfire';
+
+export default React.createClass({
   mixins: [ReactFireMixin],
   getInitialState: function(){
     return {
@@ -11,7 +13,7 @@ var PostList = React.createClass({
     }
   },
   componentDidMount: function() {
-    var ref = new Firebase('https://hacker-news.firebaseio.com/v0/topstories').limitToFirst(50);
+    var ref = new Firebase('https://hacker-news.firebaseio.com/v0/topstories').limitToFirst(30);
     this.bindAsArray(ref, 'topIds')
   },
   render: function() {
@@ -24,5 +26,3 @@ var PostList = React.createClass({
     )
   }
 });
-
-module.exports = PostList;

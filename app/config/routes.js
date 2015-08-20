@@ -1,11 +1,11 @@
-var React = require('react');
-var Main = require('../components/Main')
-var PostList = require('../components/PostList')
-var Router = require('react-router');
-var DefaultRoute = Router.DefaultRoute;
-var Route = Router.Route;
+'use strict';
 
-module.exports = (
+import React from 'react';
+import Main from '../components/Main';
+import PostList from '../components/PostList';
+import { Router, DefaultRoute, Route } from 'react-router';
+
+export default (
   <Route name="app" path="/" handler={Main}>
     <DefaultRoute handler={PostList} />
   </Route>
